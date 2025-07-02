@@ -32,7 +32,7 @@ class DokuPaymentService
     public function getPaymentUrl()
     {
         $endpoint = '/checkout/v1/payment';
-        $url = $this->url.$endpoint;
+        $url = $this->url . $endpoint;
         $data = $this->generateBody();
         $header = $this->generateHeader($endpoint);
 
@@ -52,19 +52,20 @@ class DokuPaymentService
         if ($response->ok()) {
             return $response->json();
         }
-
     }
 
     public function getCreditCardPaymentUrl()
     {
         $endpoint = '/credit-card/v1/payment-page';
-        $url = $this->url.$endpoint;
+        $url = $this->url . $endpoint;
         $data = $this->generateBody();
         $header = $this->generateHeader($endpoint);
+
 
         $response = Http::acceptJson()
             ->withHeaders($header)
             ->post($url, $data);
+
 
         // debug
         info(DokuPaymentService::class, [
@@ -78,13 +79,12 @@ class DokuPaymentService
         if ($response->ok()) {
             return $response->json();
         }
-
     }
 
     public function getCreditCard3DSecureCheck()
     {
         $endpoint = '/credit-card/check-three-d-secure';
-        $url = $this->url.$endpoint;
+        $url = $this->url . $endpoint;
         $data = $this->generateBody();
         $header = $this->generateHeader($endpoint);
 
@@ -104,7 +104,6 @@ class DokuPaymentService
         if ($response->ok()) {
             return $response->json();
         }
-
     }
 
     private function generateBody()
@@ -118,7 +117,7 @@ class DokuPaymentService
                 'price' => number_format($item->amount, 0, '.', ''),
                 'quantity' => $item->quantity,
                 'name' => $this->filterOnlyAllowedChar($item->item->order_detail),
-                'sku' => 'SKU-'.$item->id,
+                'sku' => 'SKU-' . $item->id,
                 'category' => 'Travel Agent Product',
                 'url' => route('home.index', ['locale' => 'en']),
                 'image_url' => route('home.index', ['locale' => 'en']),
@@ -181,7 +180,7 @@ class DokuPaymentService
     {
         $requestId = Str::uuid()->toString();
         $requestDate = now()->toISOString();
-        $requestDate = substr($requestDate, 0, 19).'Z';
+        $requestDate = substr($requestDate, 0, 19) . 'Z';
         // For merchant request to Jokul, use Jokul path here. For HTTP Notification, use merchant path here
         $requestBody = $this->generateBody();
 
@@ -189,11 +188,11 @@ class DokuPaymentService
         $digestValue = base64_encode(hash('sha256', json_encode($requestBody), true));
 
         // Prepare Signature Component
-        $componentSignature = 'Client-Id:'.$this->clientId."\n".
-            'Request-Id:'.$requestId."\n".
-            'Request-Timestamp:'.$requestDate."\n".
-            'Request-Target:'.$endpoint."\n".
-            'Digest:'.$digestValue;
+        $componentSignature = 'Client-Id:' . $this->clientId . "\n" .
+            'Request-Id:' . $requestId . "\n" .
+            'Request-Timestamp:' . $requestDate . "\n" .
+            'Request-Target:' . $endpoint . "\n" .
+            'Digest:' . $digestValue;
 
         // Calculate HMAC-SHA256 base64 from all the components above
         $signature = base64_encode(hash_hmac('sha256', $componentSignature, $this->secretKey, true));
@@ -202,7 +201,7 @@ class DokuPaymentService
             'Client-Id' => $this->clientId,
             'Request-Id' => $requestId,
             'Request-Timestamp' => $requestDate,
-            'Signature' => 'HMACSHA256='.$signature,
+            'Signature' => 'HMACSHA256=' . $signature,
         ];
     }
 

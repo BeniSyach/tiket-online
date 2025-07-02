@@ -42,7 +42,7 @@ class AppServiceProvider extends ServiceProvider
         //         );
         //     });
         // }
-
+        Schema::defaultStringLength(191);
         // just for optional provider on web app run
         try {
             // shared setting
