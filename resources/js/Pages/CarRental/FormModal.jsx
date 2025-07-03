@@ -15,9 +15,9 @@ export default function FormModal(props) {
         price: '',
         description: '',
         capacity: '',
-        luggage: '',
-        car_owned: '',
-        transmission: '',
+        luggage: 0,
+        car_owned: 0,
+        transmission: 0,
         image: '',
         image_url: '',
         is_publish: 1,
@@ -73,7 +73,7 @@ export default function FormModal(props) {
         <Modal
             isOpen={modalState.isOpen}
             toggle={handleClose}
-            title={"Car Rental"}
+            title={"Parkir"}
         >
             <FormInput
                 name="name"
@@ -95,33 +95,33 @@ export default function FormModal(props) {
                 name="capacity"
                 value={data.capacity}
                 onChange={handleOnChange}
-                label="Seats"
+                label="Kapasitas"
                 error={errors.capacity}
             />
-            <FormInput
+            {/* <FormInput
                 type="number"
                 name="luggage"
                 value={data.luggage}
                 onChange={handleOnChange}
                 label="Luggage"
                 error={errors.luggage}
-            />
-            <FormInput
+            /> */}
+            {/* <FormInput
                 type="number"
                 name="car_owned"
                 value={data.car_owned}
                 onChange={handleOnChange}
                 label="Car Owned"
                 error={errors.car_owned}
-            />
-            <div className='my-4'>
+            /> */}
+            {/* <div className='my-4'>
                 <div className='mb-1 text-sm'>Transmision</div>
                 <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" onChange={handleOnChange} value={data.transmission} name="transmission">
                     {['', 'Manual', 'Automatic', 'Hybrid'].map(p => (
                         <option key={p} value={p}>{p}</option>
                     ))}
                 </select>
-            </div>
+            </div> */}
             <div className='my-4'>
                 <div className='mb-1 text-sm'>Status </div>
                 <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" onChange={handleOnChange} value={+data.is_publish} name="is_publish">

@@ -151,7 +151,7 @@ export default function CreateForm(props) {
                                     className="border-gray-600 border bg-gray-600 text-white hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5"
                                     onClick={() => carRentalModal.toggle()}
                                 >
-                                    car rental
+                                    Parkir
                                 </div>
                                 <div
                                     className="border-gray-600 border bg-gray-600 text-white hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5"

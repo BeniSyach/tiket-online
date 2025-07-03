@@ -41,7 +41,7 @@ export default function CarRental(props) {
         <Modal
             isOpen={modalState.isOpen}
             toggle={modalState.toggle}
-            title={'Car Rental'}
+            title={'Parkir'}
         >
             {loading && <div className="w-full mx-auto">Loading...</div>}
             <div className={`overflow-auto ${loading && 'hidden'}`}>

@@ -44,7 +44,7 @@ class SitemapController extends Controller
                     ],
                     [
                         'url' => route('car.index'),
-                        'updated_at' => Page::where('key', 'car-rental')->value('updated_at')->toISOString(),
+                        'updated_at' => Page::where('key', 'parkir')->value('updated_at')->toISOString(),
                     ],
                 ];
 

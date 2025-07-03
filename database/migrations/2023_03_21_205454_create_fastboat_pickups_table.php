@@ -42,9 +42,9 @@ return new class extends Migration
         $check = Setting::where('key', 'EKAJAYA_HOST')->exists();
         if (! $check && Setting::count() != 0) {
             $settings = [
-                ['id' => Str::uuid(), 'key' => 'EKAJAYA_HOST', 'value' => 'https://nusatravel.ajikamaludin.id', 'type' => 'text', 'label' => 'Ekajaya Api Host'],
-                ['id' => Str::uuid(), 'key' => 'EKAJAYA_APIKEY', 'value' => 'abc-test', 'type' => 'text', 'label' => 'Ekajaya Api Key'],
-                ['id' => Str::uuid(), 'key' => 'EKAJAYA_ENABLE', 'value' => '0', 'type' => 'text', 'label' => 'Ekajaya Integration Enable'],
+                ['id' => Str::uuid(), 'key' => 'EKAJAYA_HOST', 'value' => 'http://localhost:8000', 'type' => 'text', 'label' => 'Testing Host'],
+                ['id' => Str::uuid(), 'key' => 'EKAJAYA_APIKEY', 'value' => 'abc-test', 'type' => 'text', 'label' => 'Testing Key'],
+                ['id' => Str::uuid(), 'key' => 'EKAJAYA_ENABLE', 'value' => '0', 'type' => 'text', 'label' => 'Testing Integration Enable'],
             ];
 
             Setting::insert($settings);

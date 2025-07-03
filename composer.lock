@@ -175,8 +175,8 @@
             ],
             "authors": [
                 {
-                    "name": "KyleKatarn",
-                    "email": "kylekatarnls@gmail.com"
+                    "name": "beni",
+                    "email": "benisyach32@gmail.com"
                 }
             ],
             "description": "Types to use Carbon in Doctrine",

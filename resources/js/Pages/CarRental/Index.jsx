@@ -61,11 +61,11 @@ export default function Index(props) {
             auth={props.auth}
             errors={props.errors}
             flash={props.flash}
-            page={'Car Rental'}
+            page={'Parkir'}
             action={''}
             parent={route('car-rental.index')}
         >
-            <Head title="Car Rental" />
+            <Head title="Parkir" />
 
             <div>
                 <div className="mx-auto sm:px-6 lg:px-8 ">

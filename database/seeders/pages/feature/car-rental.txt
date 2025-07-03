@@ -1,6 +1,6 @@
 <section class="w-full max-w-5xl mx-auto pt-3 mt-10 px-2">
     <h1 class="text-2xl font-bold mb-4">Discover the Best Car Rental Services in Bali</h1>
-    <p>At Nusa Travel, we provide a wide range of car rental services in Bali to cater to your every need. Whether you're looking for a self-drive car rental, a car rental with a driver, a luxury car rental, or a monthly car rental, we have it all. Our services are available at various locations across Bali, including popular destinations such as Bali Airport, Balikpapan, and Kuta.</p>
+    <p>At Tiket Online, we provide a wide range of car rental services in Bali to cater to your every need. Whether you're looking for a self-drive car rental, a car rental with a driver, a luxury car rental, or a monthly car rental, we have it all. Our services are available at various locations across Bali, including popular destinations such as Bali Airport, Balikpapan, and Kuta.</p>
     <h3 class="text-xl font-bold mt-6 mb-4">Car Rental Bali with Driver</h3>
     <p>Experience the beauty of Bali with the convenience of a professional driver. Our car rental Bali with driver service offers a comfortable and hassle-free way to explore the island. Whether you need a car rental at Bali Airport or anywhere else on the island, our experienced drivers will ensure a smooth and enjoyable journey.</p>
     <h3 class="text-xl font-bold mt-6 mb-4">Car Rental Bali Self Drive</h3>

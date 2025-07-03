@@ -1,7 +1,7 @@
 <x-mail::message>
 # Hai, {{ $customer->name }}
 
-## Welcome to {{ config('app.name', 'Nusa Travel') }}
+## Welcome to {{ config('app.name', 'Tiket Online') }}
 To begin use our service please active your account with click this activation button down below.
 
 <x-mail::button url="{{ route('customer.active', $customer) }}">

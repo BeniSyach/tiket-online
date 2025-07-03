@@ -20,10 +20,10 @@
             </div>
             <!-- Slider indicators -->
             <!-- <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                    @foreach ($setting->getSlides() as $slide)
+                                    @foreach ($setting->getSlides() as $slide)
     <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
     @endforeach
-                </div> -->
+                                </div> -->
             <!-- Slider controls -->
             <button type="button"
                 class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
@@ -57,7 +57,7 @@
                     {{ $setting->getValue('G_SITE_SUBWELCOME') }}</div>
             </div>
 
-            <div
+            {{-- <div
                 class="block mt-5 md:absolute z-40 md:bottom-24 md:left-1/2 md:-translate-x-1/2 max-w-7xl w-full lg:w-2/3 mx-auto h-60 ">
                 <div>
                     <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500">
@@ -72,12 +72,10 @@
                     </ul>
                 </div>
                 <div class="bg-white rounded-b-xl rounded-r-xl border-gray-200 shadow-xl px-8 py-6">
-                    <x-fastboat-schedule ways="1" from="" to="" :date="now()->format('Y-m-d')" :rdate="now()
-                        ->addDays(2)
-                        ->format('Y-m-d')"
+                    <x-fastboat-schedule ways="1" from="" to="" :date="now()->format('Y-m-d')" :rdate="now()->addDays(2)->format('Y-m-d')"
                         passengers='' />
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 
@@ -85,34 +83,36 @@
     <div class="w-full max-w-7xl mx-auto pt-80 md:mt-5 md:pt-5 px-2 text-center">
         <div class="grid grid-cols-1 md:grid-cols-4 space-y-4 md:space-y-0 md:gap-2 py-2">
             <div class="py-2 px-2">
-                <img class=" w-full aspect-video" src="{{ asset('images/undraw_Travel.png') }}" loading="lazy"
-                    alt="Hassle-Free" />
-                <h3 class="font-bold text-2xl pb-2">Hassle-Free</h3>
-                <span class=" text-lg leading-tight">We are dedicated to providing seamless and convenient travel
-                    experiences to our clients</span>
+                <img class="w-full aspect-video" src="{{ asset('images/undraw_Travel.png') }}" loading="lazy"
+                    alt="Tanpa Ribet" />
+                <h3 class="font-bold text-2xl pb-2">Tanpa Ribet</h3>
+                <span class="text-lg leading-tight">Kami berkomitmen memberikan pengalaman perjalanan yang mudah dan nyaman
+                    bagi Anda</span>
             </div>
             <div class="py-2 px-2">
-                <img class=" w-full aspect-video" src="{{ asset('images/undraw_Yacht.png') }}" loading="lazy"
-                    alt="Service You Can Trust" />
-                <h3 class="font-bold text-2xl pb-2">Service You Can Trust</h3>
-                <span class=" text-lg leading-tight">We offer the most reliable and efficient transport options</span>
+                <img class="w-full aspect-video" src="{{ asset('images/undraw_Yacht.png') }}" loading="lazy"
+                    alt="Layanan Terpercaya" />
+                <h3 class="font-bold text-2xl pb-2">Layanan Terpercaya</h3>
+                <span class="text-lg leading-tight">Kami menyediakan pilihan transportasi yang paling andal dan
+                    efisien</span>
             </div>
             <div class="py-2 px-2">
-                <img class=" w-full aspect-video" src="{{ asset('images/undraw_adventure.png') }}" loading="lazy"
-                    alt="Expertise" />
-                <h3 class="font-bold text-2xl pb-2">Expertise</h3>
-                <span class=" text-lg leading-tight">Our experts are here to help you plan your trip and make the most of
-                    your adventure</span>
+                <img class="w-full aspect-video" src="{{ asset('images/undraw_adventure.png') }}" loading="lazy"
+                    alt="Ahli di Bidangnya" />
+                <h3 class="font-bold text-2xl pb-2">Ahli di Bidangnya</h3>
+                <span class="text-lg leading-tight">Tim ahli kami siap membantu merencanakan perjalanan dan petualangan
+                    Anda</span>
             </div>
             <div class="py-2 px-2">
-                <img class=" w-full aspect-video" src="{{ asset('images/undraw_Trip.png') }}" loading="lazy"
-                    alt="Get packages" />
-                <h3 class="font-bold text-2xl pb-2">Get packages</h3>
-                <span class=" text-lg leading-tight">Our tour packages are designed to offer a comprehensive and immersive
-                    travel experience</span>
+                <img class="w-full aspect-video" src="{{ asset('images/undraw_Trip.png') }}" loading="lazy"
+                    alt="Paket Wisata" />
+                <h3 class="font-bold text-2xl pb-2">Paket Wisata</h3>
+                <span class="text-lg leading-tight">Paket wisata kami dirancang untuk memberikan pengalaman perjalanan yang
+                    lengkap dan menyeluruh</span>
             </div>
         </div>
     </div>
+
 
     <!-- popular packages -->
     <div class="w-full max-w-7xl mx-auto py-2 px-2">
@@ -137,8 +137,8 @@
                     <div
                         class="hover:-translate-y-2 ease-in duration-150 shadow first-letter:max-w-sm bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
                         <a href="{{ route('tour-packages.show', $package) }}" class="w-full">
-                            <img class="rounded-t-lg h-48 w-full" src="{{ asset($package->cover_image) }}"
-                                loading="lazy" alt="{{ $package->title }}" />
+                            <img class="rounded-t-lg h-48 w-full" src="{{ asset($package->cover_image) }}" loading="lazy"
+                                alt="{{ $package->title }}" />
                         </a>
                         <div class="p-5">
                             <a href="{{ route('tour-packages.show', $package) }}">

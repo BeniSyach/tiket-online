@@ -76,7 +76,7 @@ export default function FormModal(props) {
                 error={errors.source_id}
             />
             <CarRentalSelectionInput
-                label="Car Rental"
+                label="Parkir"
                 itemSelected={data.car_rental_id}
                 onItemSelected={(id) => setData('car_rental_id', id)}
                 error={errors.car_rental_id}

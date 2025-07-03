@@ -40,7 +40,7 @@ class DummySeeder extends Seeder
     public function setting()
     {
         $setting = [
-            ['id' => Str::uuid(), 'key' => 'G_SITE_NAME', 'value' => 'Nusa Travel', 'type' => 'text', 'label' => 'Site Name'],
+            ['id' => Str::uuid(), 'key' => 'G_SITE_NAME', 'value' => 'Tiket Online', 'type' => 'text', 'label' => 'Site Name'],
             ['id' => Str::uuid(), 'key' => 'G_SITE_LOGO', 'value' => 'logo-side.png', 'type' => 'image', 'label' => 'Site Logo'],
             [
                 'id' => Str::uuid(),
@@ -52,7 +52,7 @@ class DummySeeder extends Seeder
             [
                 'id' => Str::uuid(),
                 'key' => 'G_SITE_WELCOME',
-                'value' => 'Welcome To Nusa Travel',
+                'value' => 'Welcome To Tiket Online',
                 'type' => 'text',
                 'label' => 'Welcome Banner',
             ],
@@ -84,8 +84,8 @@ class DummySeeder extends Seeder
             ['id' => Str::uuid(), 'key' => 'G_WHATSAPP_URL', 'value' => 'https://wa.me/6287820231626', 'type' => 'text', 'label' => 'Whatsapp Url'],
             ['id' => Str::uuid(), 'key' => 'G_WHATSAPP_TEXT', 'value' => 'How can I help you ?', 'type' => 'text', 'label' => 'Whatsapp Text'],
 
-            ['id' => Str::uuid(), 'key' => 'EKAJAYA_HOST', 'value' => 'https://nusatravel.ajikamaludin.id', 'type' => 'text', 'label' => 'Ekajaya Api Host'],
-            ['id' => Str::uuid(), 'key' => 'EKAJAYA_APIKEY', 'value' => 'abc-test', 'type' => 'text', 'label' => 'Ekajaya Api Key'],
+            ['id' => Str::uuid(), 'key' => 'EKAJAYA_HOST', 'value' => 'http://localhost:8000', 'type' => 'text', 'label' => 'Testing Host'],
+            ['id' => Str::uuid(), 'key' => 'EKAJAYA_APIKEY', 'value' => 'abc-test', 'type' => 'text', 'label' => 'Testing Key'],
             ['id' => Str::uuid(), 'key' => 'EKAJAYA_ENABLE', 'value' => '0', 'type' => 'text', 'label' => 'Ekajaya Integration Enable'],
             ['id' => Str::uuid(), 'key' => 'EKAJAYA_LOGO', 'value' => 'images/logo_ekajaya.png', 'type' => 'image', 'label' => 'Ekajaya Logo'],
             ['id' => Str::uuid(), 'key' => 'EKAJAYA_MARK', 'value' => 'By Integrated', 'type' => 'image', 'label' => 'Ekajaya Mark'],
@@ -184,7 +184,7 @@ class DummySeeder extends Seeder
     public function faq()
     {
         $faqs = [
-            ['id' => Str::uuid(), 'question' => 'Why Nusa Travel ? ', 'answer' => "<div>
+            ['id' => Str::uuid(), 'question' => 'Why Tiket Online ? ', 'answer' => "<div>
             <div>An Indonesia's leading provider of fast boat tickets, we offer the most reliable and</div>
             <div>efficient transport options for island-hopping. Our main fast boat, the Ekajaya Fast Boat,</div>
             <div>is equipped with modern facilities and offers a comfortable and safe journey to your</div>

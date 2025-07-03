@@ -71,7 +71,7 @@ Route::middleware([VisitorCounter::class, GuardCustomer::class])->group(function
     Route::get('/tour-packages/{package:slug}', [TourPackageController::class, 'show'])->name('tour-packages.show');
 
     // Car Rentals
-    Route::get('/car-rental-bali', [CarRentalController::class, 'index'])->name('car.index');
+    Route::get('/parkir', [CarRentalController::class, 'index'])->name('car.index');
 
     // Fastboat
     Route::get('/fastboat', [FastboatController::class, 'index'])->name('fastboat');
@@ -112,7 +112,7 @@ Route::middleware([VisitorCounter::class, GuardCustomer::class])->group(function
         Route::post('/profile/logout', [CustomerProfileController::class, 'destroy'])->name('customer.logout');
     });
 
-    Route::get('/', fn () => redirect()->route('home.index', ['locale' => app()->getLocale()]));
+    Route::get('/', fn() => redirect()->route('home.index', ['locale' => app()->getLocale()]));
     Route::prefix('/{locale}')
         ->whereIn('locale', ['en', 'id', 'zh'])
         ->middleware([SetLocale::class])
@@ -138,5 +138,5 @@ Route::middleware([VisitorCounter::class, GuardCustomer::class])->group(function
     Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 });
 
-require __DIR__.'/admin.php';
-require __DIR__.'/auth.php';
+require __DIR__ . '/admin.php';
+require __DIR__ . '/auth.php';

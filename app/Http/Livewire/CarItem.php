@@ -44,7 +44,7 @@ class CarItem extends Component
     public function guest()
     {
         $carts = session('carts') ?? [];
-
+        $carts = is_array($carts) ? $carts : $carts?->toArray() ?? [];
         if (count($carts) > 0) {
             try {
                 $isExists = $carts[$this->car->id];

@@ -92,7 +92,7 @@ export default function Index(props) {
                                             <th scope="col" className="py-3 px-6">
                                                 Origin
                                             </th><th scope="col" className="py-3 px-6">
-                                                Car Rental
+                                                Parkir
                                             </th>
                                             <th scope="col" className="py-3 px-6"/>
                                         </tr>
