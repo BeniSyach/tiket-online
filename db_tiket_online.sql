@@ -1177,7 +1177,7 @@ INSERT INTO `settings` VALUES ('7e52da6e-3595-4f4b-834c-5f71eff67d6f', 'DOKU_LOG
 INSERT INTO `settings` VALUES ('71328e18-1f31-4ec7-bd77-e0de56b5c7b4', 'G_WHATSAPP_FLOAT_ENABLE', '1', 'checkbox', 'Whatsapp Float Button Enable', NULL, NULL, '2025-07-03 17:02:13');
 INSERT INTO `settings` VALUES ('b39a9ab5-0ff2-4c48-b0ab-6ef32cebe242', 'G_WHATSAPP_URL', 'https://wa.me/6282277757717', 'text', 'Whatsapp Url', NULL, NULL, '2025-07-03 17:02:13');
 INSERT INTO `settings` VALUES ('3bf515d3-fe5a-4f58-bea3-3f27582b9c44', 'G_WHATSAPP_TEXT', 'How can I help you ?', 'text', 'Whatsapp Text', NULL, NULL, '2025-07-03 17:02:13');
-INSERT INTO `settings` VALUES ('a12e05ee-84f7-48c3-8719-4e7393e127e1', 'EKAJAYA_HOST', 'https://nusatravel.ajikamaludin.id', 'text', 'Ekajaya Api Host', NULL, NULL, NULL);
+INSERT INTO `settings` VALUES ('a12e05ee-84f7-48c3-8719-4e7393e127e1', 'EKAJAYA_HOST', 'http://localhost:8000', 'text', 'Ekajaya Api Host', NULL, NULL, NULL);
 INSERT INTO `settings` VALUES ('2ef198cb-5aca-401e-8920-855ee0b369e3', 'EKAJAYA_APIKEY', 'abc-test', 'text', 'Ekajaya Api Key', NULL, NULL, NULL);
 INSERT INTO `settings` VALUES ('38ae96cf-f3e6-4233-a133-036bfca78c18', 'EKAJAYA_ENABLE', '0', 'text', 'Ekajaya Integration Enable', NULL, NULL, NULL);
 INSERT INTO `settings` VALUES ('f6e2f703-74f7-4b9b-b879-b1d21d028c60', 'EKAJAYA_LOGO', 'images/logo_ekajaya.png', 'image', 'Ekajaya Logo', NULL, NULL, NULL);
